@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> FINAL Website </title>
+  <!--favicon-->
+  <!--icon CDN link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/png" href="https://scontent.fmnl25-3.fna.fbcdn.net/v/t1.15752-9/385548290_310191651992916_8626044029584173264_n.png?_nc_cat=101&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeE6ppv78FdCpH9f93JcHPxfljvcXw_0ybSWO9xfD_TJtHtg4vTHmR761AqrIhMTbZ8MxGXpcgxkwZWJ85zIaYCQ&_nc_ohc=sInVS4RsHIQAX8Wcl1A&_nc_ht=scontent.fmnl25-3.fna&oh=03_AdReTBxi5v8vQprCfbK7GIjU0wz0AT0Q_Qn2iiQFtZksqQ&oe=65A7C8B2">
+
+</head>
+
+<!--START OF STYLE -->
+<style>
+   
+  @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Noto+Serif:ital,wght@1,700&family=Playball&family=Poppins:wght@300;400;500;600&family=Shizuru&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "poppins", sans-serif;
+  }
+:root{
+    --main-color:rgb(45, 45, 168);
+    --bg-color: white;
+    --text-color: rgb(49, 46, 46);
+    --hover: hsl(260,100%, 51%);
+
+    --big-font: 3.2rem;
+    --medium-font: 1.8rem;
+    --p-font: 0.941rem;
+}
+  body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+/* HOME SECTION */
+section{
+    padding: 50px 10%;
+}
+*::selection{
+    color: var(--bg-color);
+    background: var(--main-color);
+}
+.home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+.home-img{
+    order: 3;
+}
+.home-img img{
+    width: 100%;
+}
+.home-text span{
+    font-size: var(--medium-font);
+    font-weight: 500;
+}
+.home-text h1{
+    font-size: var(--big-font);
+    max-width: fit-content;
+}
+.home-text h2{
+    font-size: 1.1rem;
+    font-weight: 400;  
+}
+.home-text p{
+    font-size: var(--p-font);
+    font-weight:400;
+    margin: 0.7rem 0 1rem;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+}
+.social a{
+    margin-bottom: 1rem;
+    font-size: 22px;
+    color: var(--text-color);
+
+}
+/*hover*/
+.social a:hover{
+    color: var(--hover);
+}
+/* BUTTON*/
+.btn{
+    display: inline-block;
+    background: var(--main-color);
+    color:aliceblue;
+    padding: 0.7rem 1.3rem;
+    border-radius: 0.5rem;
+}
+.btn:hover{
+    background: var(--hover);
+}
+/* SECTION INFO */
+
+.heading h2{
+   font-size: 30px;
+}
+.heading span{
+    font-size: var(--p-font);
+    color: rgb(161, 80, 4);
+}
+.about-container{
+    display: grid;
+    grid-template-columns: repeat (2, 1fr);
+    gap:1rem;
+    margin-top: 2rem;
+}
+
+.about-img img{
+    width: 45%;
+    border-radius: 0.5rem;
+}
+.information{
+    margin: 1rem 0 1.4rem;
+}
+.information .info-box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.4rem;
+}
+.information .info-box .bx{
+    font-size: 22px;
+}
+.information .info-box span {
+   font-weight:400;
+   margin-left:1rem;
+}
+
+/* hobbies */
+.hobbies-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.hobbies-box{
+    padding:20px;
+    width:260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+    border-radius: 0.5rem;
+    border-bottom:2px solid var(--main-color);
+    box-shadow: 0 2px 7px rgba(14 55 54 / 15%);
+}
+.hobbies-box .fa{
+    padding-top: 2rem;
+    font-size: 54px;
+    color: var(--main-color);
+
+}
+.hobbies-box h3{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.7rem 0 0.4rem;
+}
+.hobbies-box a{
+    color: var(--main-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+}
+/* HOVER */
+.hobbies-box:hover {
+    color: rgb(224, 57, 85);
+}
+.hobbies-box h3{
+    color: rgb(184, 215, 243);
+}
+.hobbies-box:hover .fa{
+    color: deeppink;
+}
+.hobbies-box:hover a{
+    color:antiquewhite
+}
+/* OUTPUT SECTION */
+.output-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 20
+    rem;
+    margin-top: 2rem;
+}
+.output{
+
+    margin-top: 40px;   
+}
+/* CONTACT ISECTION */
+.contact-form{
+    display: grid;
+    place-items: center;
+    margin-top: 1rem;
+    
+}
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    width: 500px;   
+}
+form input, form textarea{
+    padding: 15px;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: none;
+    outline:none;
+    background: hsl(260, 100%, 44%, 0.1);
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    align-items: center;
+    
+}
+form textarea{
+    resize:none;
+    height: 100px;
+    
+}
+.contact-button{
+    width: 160px;
+    cursor: pointer;
+    background: #2768d9;
+    color:aliceblue;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 35%;
+}
+.contact-button:hover{
+    background-color: aqua;
+}
+/* BOTTOM SECTION */
+.bottom{
+    display: grid;
+    place-item: 20px;
+    background-color: rgb(42, 43, 44);
+    color:rgb(92, 86, 86);
+}
+.bottom h2{
+    font-size: 1.5rem;
+    margin-bottom: 1.6rem;
+}
+.bottom-social a i{
+    color:blue;
+    font-size:25px;
+    margin-left: 50%px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(42, 129, 129);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.home-img img {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .home-img img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+
+
+</style>
+<!--END OF STYLE-->
+
+
+
+
+<body>
+
+<!--====NAVIGATION BAR====-->
+<!--====HOME SECTION======-->
+
+<section class="home" id="home">
+    <div class="social">
+        <a href=""><i class="fa fa-heart"></i></a>
+        <a href=""><i class="fa fa-address-card"></i></a>
+        <a href=""><i class="fa fa-star"></i></a>
+    </div>
+
+    <!-- HOME IMAGE -->
+    <div class="home-img">
+        <img src="picture.png" alt="picture" style="padding-right: 20px;">
+    </div>
+
+    <!-- HOME CONTENT -->
+    <div class="home-text">
+        <span>Hey, there! I'm</span>
+        <h1 style="width: 100px;">Jessica Encarguez</h1>
+        <h2>BSIS-111</h2>
+        <p>I'm a freshman college student studying BSIS at Kolehiyo ng Lungsod ng Dasmarinas at the moment. I consider myself a pluviophile who prefers to observe people than to engage in a conversation. I prefer being alone, but I'm also looking forward to meeting new people and building good relationships on my college journey.</p>
+
+        <!-- CONTACT BUTTON -->
+        <a hreflang="bottom" class="btn" onclick="contactMe()">Contact Me</a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function contactMe() {
+            alert("Contact button clicked!");
+            // You can add more functionality here
+        }
+    </script>
+</section>
+
+<!--SECTION INFO-->
+<section class="about" id="about" >
+    <!--heading-->
+    <div class="heading">
+        <h2>About Me</h2>
+        <span> Personal Information </span>
+    </div>
+<!-- ABOUT ME INFO-->
+<div class="about-container ">
+    <div class="about-img">
+        <img src="qt.jpg" alt="">
+    </div>
+<!--END OF IMAGE IN ABOUT ME-->
+
+<div class="information">
+    <div class="info-box">
+        <i class="fa fa-calendar"></i>
+        <span>September 26, 2003</span>
+    </div>
+    <div class="info-box">
+        <i class="fa fa-user"></i>
+        <span>Tertiary · Kolehiyo ng Lungsod ng Dasmarinas</span>
+    </div>
+    <div class="info-box">
+        <i class="fa fa-brush"></i>
+        <span>Secondary · Dasmarinas Integrated High School · ABM </span>
+    </div>
+    <div class="info-box">
+        <i class="fa fa-computer"></i>
+        <span>Elementary · Dr. Jose P. Rizal Elementary School</span>
+    </div>
+   <a href="" class="btn"> Download CV</a>
+</div>
+
+
+
+</section>
+
+<!--HOBBIES BOX-->
+<!--HEADING TITLE FOR HOBBIES-->
+<section class=" hobbies" id="hobbies">
+    <div class="heading">
+        <h2 style="text-align: center;">HOBBIES</h2>
+        <span style="margin-left: 40%;">This are some of my hobbies</span>
+<!--END OF HEADING TITLE FOR HOBBIES--> 
+<!--START OF HOBBIES CONTAINER-->
+
+    <div class="hobbies-content">
+        <!--BOX -1-->
+        <div class="hobbies-box">
+            <i class="fa fa-tv"></i>
+            <h3>Watching Anime</h3>
+            <a href="https://9animetv.to/watch/violet-evergarden-59?ep=1451"> Learn More </a>
+        </div>
+         <!--BOX -2-->
+         <div class="hobbies-box">
+            <i class="fa fa-book"></i>
+            <h3>Reading Webtoon/ Book</h3>
+            <a href="https://www.webtoons.com/en/romance/freaking-romance/list?title_no=1467"> Learn More </a>
+         </div>
+         <!--BOX -3-->
+          <div class="hobbies-box">
+            <i class="fa fa-music"></i>
+            <h3>Listening Music</h3>
+            <a href="https://youtu.be/hK1mnXrHayY?si=NkcBvrn9I8jVzzhx"> Learn More </a>
+         </div>
+         <div class="hobbies-box">
+            <i class="fa fa-cloud"></i>
+            <h3>Relapse</h3>
+            <a href=""> Learn More </a>
+         </div>
+    </div>
+</section>
+<!-- OUTPUT-->
+<section class="output" id="output">
+    <div class="heading">
+        <h2 style="text-align: center;">Output</h2>
+        <span style="margin-left: 35%;">This section contains all my previous work</span>
+    </div>
+    
+    <div class="output" style="text-align: center;">
+        <div class="output-box">
+            <a href="https://drive.google.com/file/d/1pclE45qOg2dPS2hIKt9xIbWpxJvgunr1/view?usp=drive_link" class="btn"> My First HTML</a>
+            <a href="https://yannnawi.github.io/COR/COR.html?fbclid=IwAR3ZuyYlXa6XePCbXxLwFh-p2uj73RPk43uq0krqrrO47jfWcUH7yeawK2Q" class="btn"> COR </a>
+            <a href="https://yannnawi.github.io/Activity1/index.html?fbclid=IwAR2FvPKvS5H-ikPcXsF-kbMJ2eVi2dtq_oCF85qn0MzAFBKhFk1ske60eBs" class="btn"> BOOTSTRAP </a>
+            <a href="https://yannnawi.github.io/Informative/INFORMATIVE.html?fbclid=IwAR3CKrZahF0yYpdqV_Ya0jnIjY_qJ3vqX1mjs7ikbFczRRr0WUM_13_NxjA" class="btn"> Informative Website </a>
+        </div>
+    </div>
+
+</section>
+
+<!--CONTACT INFORMATION SECTION-->
+
+<section class="contact" id="contact">
+    <div class="heading">
+        <h2 style="text-align: center;">Contact</h2>
+        <span style="margin-left: 44%;">send a message</span>
+    </div>
+
+    <div class="contact-form">
+        <form action="">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Write a message.."></textarea>
+            <input type="button" value="Send " class="contact button">
+             </form>
+    </div>
+</section>
+<!-- BOTTOM HEADER-->
+
+
+<div class="bottom" style="background-color: rgb(16, 40, 109); text-align: center; padding-bottom: 20px; padding-top: 20px;">
+    <h4 style="color: azure; padding-bottom: 10px;">Issie</h4>
+    <div class="bottom-social">
+        <a href="" style="color: #3762ad; margin-right: 15px;"><i class="fa fa-paper-plane"></i></a>
+        <a href="https://www.facebook.com/" style="color: #3762ad; margin-right: 15px;"><i class="fa fa-facebook"></i></a>
+        <a href="" style="color: #3762ad; margin-right: 15px; "><i class="fa fa-tiktok"></i></a>
+    </div>
+</div>
+
+
+
+
+</div>
+
+<!--js file -->
+   <script src="./js/script.js"></script>
+</body>
+  
